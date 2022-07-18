@@ -1,0 +1,45 @@
+{
+  "name": "@microfe",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap --force-local",
+    "build:webapp": "lerna run build --scope @microfe/webapp",
+    "build:menu": "lerna run build --scope @microfe/menu",
+    "start:webapp": "lerna run start --scope @microfe/trading",
+    "start:menu": "lerna run start --scope @microfe/menu",
+    "format": "prettier --write \"**/*.ts\" ",
+    "lint": "eslint \"**/*.ts\" \"**/*.tsx\" --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lerna": "^4.0.0",
+    "typescript": "^4.3.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.16.1",
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "1.18.2"
+  }
+}
